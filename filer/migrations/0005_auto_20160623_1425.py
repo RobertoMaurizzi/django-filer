@@ -17,21 +17,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='file',
             name='owner',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='owned_files', to=settings.AUTH_USER_MODEL, verbose_name='owner'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=models.deletion.SET_NULL, related_name='owned_files', to=settings.AUTH_USER_MODEL, verbose_name='owner'),
         ),
         migrations.AlterField(
             model_name='folder',
             name='owner',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='filer_owned_folders', to=settings.AUTH_USER_MODEL, verbose_name='owner'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=models.deletion.SET_NULL, related_name='filer_owned_folders', to=settings.AUTH_USER_MODEL, verbose_name='owner'),
         ),
         migrations.AlterField(
             model_name='folderpermission',
             name='user',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='filer_folder_permissions', to=settings.AUTH_USER_MODEL, verbose_name='user'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=models.deletion.SET_NULL, related_name='filer_folder_permissions', to=settings.AUTH_USER_MODEL, verbose_name='user'),
         ),
         migrations.AlterField(
             model_name='folderpermission',
             name='user',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='filer_folder_permissions', to=settings.AUTH_USER_MODEL, verbose_name='user'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=models.deletion.SET_NULL, related_name='filer_folder_permissions', to=settings.AUTH_USER_MODEL, verbose_name='user'),
         ),
     ]

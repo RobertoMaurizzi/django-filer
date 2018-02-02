@@ -14,6 +14,15 @@ except ImportError:
 
 from django.utils.text import Truncator
 
+try:
+    from django.utils.functional import keep_lazy
+    
+    def allow_lazy(func, *resultclasses):
+        return keep_lazy(*resultclasses)(func)    
+
+except ImportError:
+    from django.utils.functional import allow_lazy 
+
 
 def truncate_words(s, num, end_text='...'):
     # truncate_words was removed in Django 1.5.
