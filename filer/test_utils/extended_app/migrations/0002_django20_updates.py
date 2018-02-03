@@ -30,4 +30,9 @@ class Migration(migrations.Migration):
                 name='video',
                 options={'default_manager_name': 'objects'},
             ),
+            migrations.AlterField(
+                model_name='extimage',
+                name='file_ptr',
+                field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, related_name='extended_app_extimage_file', serialize=False, to='filer.File'),
+            ),
         ]
