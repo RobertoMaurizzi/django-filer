@@ -32,12 +32,6 @@ after_success:
   - mkdir -p shippable/codecoverage && cp coverage.xml shippable/codecoverage/coverage.xml
 
 env:
-  - DJANGO="1.8" SWAP="no"
-  - DJANGO="1.8" SWAP="yes"
-  - DJANGO="1.9" SWAP="no"
-  - DJANGO="1.9" SWAP="yes"
-  - DJANGO="1.10" SWAP="no"
-  - DJANGO="1.10" SWAP="yes"
   - DJANGO="1.11" SWAP="no"
   - DJANGO="1.11" SWAP="yes"
   - DJANGO="2.0" SWAP="no"
@@ -55,36 +49,20 @@ matrix:
     - os: osx
       language: generic
       python: "2.7"
-      env: DJANGO="1.8" SWAP="no"
-    - os: osx
-      language: generic
-      python: "2.7"
-      env: DJANGO="1.9" SWAP="no"
-    - os: osx
-      language: generic
-      python: "2.7"
-      env: DJANGO="1.10" SWAP="no"
-    - os: osx
-      language: generic
-      python: "2.7"
       env: DJANGO="1.11" SWAP="no"
+    - os: osx
+      language: generic
+      python: "2.7"
+      env: DJANGO="2.0" SWAP="no"
 
     - os: osx
       language: generic
       python: "2.7"
-      env: DJANGO="1.8" SWAP="yes"
-    - os: osx
-      language: generic
-      python: "2.7"
-      env: DJANGO="1.9" SWAP="yes"
-    - os: osx
-      language: generic
-      python: "2.7"
-      env: DJANGO="1.10" SWAP="yes"
-    - os: osx
-      language: generic
-      python: "2.7"
       env: DJANGO="1.11" SWAP="yes"
+    - os: osx
+      language: generic
+      python: "2.7"
+      env: DJANGO="2.0" SWAP="yes"
 
     - os: linux
       python: "3.4"
@@ -139,13 +117,7 @@ matrix:
 # image model swapping is failing in Django>=1.10
     - os: linux
       python: "2.7"
-      env: DJANGO="1.10" SWAP="yes"
-    - os: linux
-      python: "2.7"
       env: DJANGO="1.11" SWAP="yes"
-    - os: linux
-      python: "3.4"
-      env: DJANGO="1.10" SWAP="yes"
     - os: linux
       python: "3.4"
       env: DJANGO="1.11" SWAP="yes"
@@ -154,16 +126,10 @@ matrix:
       env: DJANGO="2.0" SWAP="yes"
     - os: linux
       python: "3.5"
-      env: DJANGO="1.10" SWAP="yes"
-    - os: linux
-      python: "3.5"
       env: DJANGO="1.11" SWAP="yes"
     - os: linux
       python: "3.5"
       env: DJANGO="2.0" SWAP="yes"
-    - os: linux
-      python: "3.6"
-      env: DJANGO="1.10" SWAP="yes"
     - os: linux
       python: "3.6"
       env: DJANGO="1.11" SWAP="yes"
@@ -171,11 +137,3 @@ matrix:
       python: "3.6"
       env: DJANGO="2.0" SWAP="yes"
 
-    - os: osx
-      language: generic
-      python: "2.7"
-      env: DJANGO="1.10" SWAP="yes"
-    - os: osx
-      language: generic
-      python: "2.7"
-      env: DJANGO="1.11" SWAP="yes"
