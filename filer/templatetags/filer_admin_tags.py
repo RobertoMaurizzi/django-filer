@@ -8,6 +8,7 @@ from ..admin.tools import admin_url_params, admin_url_params_encoded
 
 register = Library()
 
+
 def filer_actions(context):
     """
     Track the number of times the action field has been rendered on the page,
