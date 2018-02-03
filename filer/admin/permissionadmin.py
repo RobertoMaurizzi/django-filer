@@ -7,6 +7,7 @@ from .. import settings
 from ..fields import folder
 from ..utils.compatibility import GTE_DJANGO_1_10
 
+
 class PermissionAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {'fields': (('type', 'folder', ))}),
